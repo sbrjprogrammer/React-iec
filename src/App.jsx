@@ -1,11 +1,20 @@
 import React,{useState} from 'react';
-import ComponentDidMount from './component/componentDidMount';
-
+import ComponentDidMount from './component/lifecycle/componentDidMount';
+import ComponetWillUnmounnt from './component/lifecycle/lifecycle';
+import Parent1 from './component/Parent1';
+import counterContext from './component/CounterContext';
+import Child from './component/Child';
+import ProductPage from './ReuseAbility/ProductPage';
+import Popup from './ReuseAbility/Popup';
 import './App.css';
+
 
 function App() {
 
+let  [count, setCount] = useState(2)
   
+ 
+
 // const [todoList, settodoList] = useState([])
 //  let [todoList,settodoList] = useState([])
 //   let [task,setTask]=useState("")
@@ -71,9 +80,23 @@ function App() {
 
   
     // </div>
-    <div>
-      <ComponentDidMount/>
-    </div>
+  //  <counterContext.Provider value={{count,setCount}}>
+  //    <Parent1/>
+  //    <Child/>
+
+
+
+
+     
+
+
+  //  </counterContext.Provider>
+
+
+  <ProductPage/>
+  // <Popup/>
+
+   
   );
 }
 

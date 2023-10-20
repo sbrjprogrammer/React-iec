@@ -10,16 +10,18 @@ function ComponetWillUnmounnt() {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
   };
 
-  // Set up the event listener when the component mounts
+ 
   useEffect(() => {
-    // Add the event listener for the 'resize' event
+   
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener when the component unmounts
+  
     return () => {
       // Remove the event listener when the component unmounts
       window.removeEventListener('resize', handleResize);
     };
+
+    
   }, []); // The empty dependency array means this effect runs once on mount
 
   return (

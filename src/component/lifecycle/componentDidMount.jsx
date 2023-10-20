@@ -4,8 +4,14 @@ function ComponentDidMount() {
 
     let [data, setData] = useState([])
 
+    let [count,setCount]=useState(0)
+    let [count2,setCoun2]=useState(0)
+
+
+
+
     useEffect(()=>{
-// componentdidmount
+        // componentdidmount
             // axios.get("https://jsonplaceholder.typicode.com/users")
             // .then((response)=>{
             //     let dataRes = response.data
@@ -18,10 +24,13 @@ function ComponentDidMount() {
             //     console.log(err)
             // })
 
+            setCoun2(count2+1)
+            console.log(count2)
 
-    },[])
+    },[count])
 
 
+           
 
 
 
